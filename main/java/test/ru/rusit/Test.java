@@ -2,6 +2,7 @@ package ru.rusit;
 
 import org.junit.Assert;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Iterator;
 
@@ -14,12 +15,12 @@ public class Test {
     
     @org.junit.Test
     public void testMain() {
-        Assert.assertThat(check(Main.excersize("1", "10", "5", "9", "100", "20", "11")), is(true));
+        Assert.assertThat(check(Main.excersize(new String[]{"1", "10", "5", "9", "100", "20", "11"})), is(true));
     }
     
-    @org.junit.Test(expected = Exception.class)
+    @org.junit.Test(expected = FileNotFoundException.class)
     public void testMainException() {
-        Main.excersize("1", "10", "5", "nine", "100", "20", "11");
+        Main.excersize(new String[]{"1", "10", "5", "nine", "100", "20", "11"});
     }
     
     private boolean check(Double[] excersize) {
