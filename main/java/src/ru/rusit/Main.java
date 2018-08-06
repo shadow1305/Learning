@@ -1,3 +1,10 @@
+/*
+ * Тема:
+ * Структуры данных
+ *
+ *
+ */
+
 package ru.rusit;
 
 public class Main {
